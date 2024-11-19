@@ -1,0 +1,78 @@
+\begin{challenge}
+    \chatitle{Dynamic Linked Containers with \texttt{std::list} in C++}
+    \begin{chadescription}
+    In C++, the \texttt{std::list} class represents a doubly linked list, a dynamic container that allows efficient insertion and deletion of elements at any position. 
+    Unlike arrays or \texttt{std::array}, \texttt{std::list} is not limited by a fixed size, and it can grow or shrink dynamically as elements are added or removed.
+
+    The \texttt{std::list} container is especially useful when you need frequent insertions and deletions in the middle of the collection, as these operations are more efficient compared to other containers like \texttt{std::vector}. 
+    With built-in functions like \texttt{push_back()}, \texttt{push_front()}, \texttt{insert()}, and \texttt{erase()}, it abstracts the complexities of pointer management inherent in manually implemented linked lists in C. 
+
+    In this challenge, you will explore how to use \texttt{std::list} for dynamic data storage and manipulation. 
+    You will also compare it to a manually implemented linked list in C to understand the advantages of using this STL container. 
+    By the end, you will have a solid grasp of when and why to use \texttt{std::list} in C++ programs.
+    \end{chadescription}
+
+    \begin{task}
+        Write a simple program using \texttt{std::list} that performs the following steps:
+        \begin{enumerate}
+            \item Declare an \texttt{std::list} to store integer values.
+            \item Add the numbers \texttt{10}, \texttt{20}, and \texttt{30} to the list using \texttt{push_back()}.
+            \item Print all elements of the list using a range-based \texttt{for} loop.
+            \item Add the number \texttt{5} to the front of the list using \texttt{push_front()}.
+            \item Print the updated list to the terminal.
+        \end{enumerate}
+
+        Save your program and run it to ensure the output matches your expectations.
+
+        \begin{questions}
+            \item What is the difference between \texttt{push_back()} and \texttt{push_front()} in \texttt{std::list}?
+            \item How does the way you add elements to a list differ from adding elements to a raw C-style array?
+            \item Why is it easier to insert elements at the front or back of an \texttt{std::list} compared to a \texttt{std::vector} or \texttt{std::array}?
+        \end{questions}
+    \end{task}
+
+    \begin{task}
+        Write a program using \texttt{std::list} that performs the following steps:
+        \begin{enumerate}
+            \item Declare and initialize an \texttt{std::list} with the values \texttt{1, 2, 3, 4, 5}.
+            \item Implement a function named \texttt{printList} that takes an \texttt{std::list} as a parameter and prints its elements to the terminal.
+            \item Insert the value \texttt{10} into the list at the third position.
+            \item Remove the second element from the list.
+            \item Call \texttt{printList} after each modification to observe the changes.
+        \end{enumerate}
+
+        Save your program, compile it, and ensure that it runs correctly.
+
+        \begin{questions}
+            \item What challenges would arise when inserting or deleting elements in a manually implemented linked list in C, and how does \texttt{std::list} address these?
+            \item How does \texttt{std::list}'s iterator simplify accessing specific positions in the list compared to using indices in an array?
+            \item What happens to the memory of an element in \texttt{std::list} after you remove it using \texttt{erase()}?
+        \end{questions}
+    \end{task}
+
+    \begin{task}
+        Write a program using \texttt{std::list} that performs the following steps:
+        \begin{enumerate}
+            \item Declare and initialize an \texttt{std::list} of integers with the values \texttt{3, 1, 4, 1, 5, 9, 2}.
+            \item Implement a function named \texttt{findMin} that takes an \texttt{std::list} as a parameter and returns the smallest element.
+            \item Reverse the order of elements in the list manually by swapping elements from the front and back using iterators.
+            \item Print the list after reversing it and display the smallest element using the \texttt{findMin} function.
+        \end{enumerate}
+
+        Save your program, compile it, and ensure it runs correctly. This task requires careful use of iterators to manipulate the list dynamically.
+
+        \begin{questions}
+            \item How does using iterators to reverse a list compare to using pointers in a manually implemented linked list in C?
+            \item What challenges might arise when working with both forward and reverse iterators, and how did you address these?
+            \item Why is \texttt{std::list} particularly well-suited for dynamic operations like reversing compared to \texttt{std::array} or \texttt{std::vector}?
+        \end{questions}
+    \end{task}
+
+    \begin{advise}
+        Working with \texttt{std::list} helps you understand how dynamic data containers can simplify memory management and complex data manipulations in C++. 
+        Unlike raw C-style linked lists, \texttt{std::list} provides built-in methods that make adding, removing, and rearranging elements much safer and more efficient. 
+        Through this challenge, you have explored the use of iterators, dynamic resizing, and the flexibility of \texttt{std::list} in handling ordered collections. 
+        Remember to choose \texttt{std::list} when you need frequent insertions and deletions but don't require random access, as other containers may be more efficient for those use cases. 
+        With practice, you'll find that \texttt{std::list} is a versatile tool for solving many programming challenges.
+    \end{advise}
+\end{challenge}
