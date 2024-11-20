@@ -1,1 +1,0 @@
-At the end of this challenge, the scholar will be able to explain the concept of \texttt{std::list} as a dynamic, doubly linked container in C++, including its advantages over manually implemented linked lists in C and its use cases for efficient insertion and deletion operations.
